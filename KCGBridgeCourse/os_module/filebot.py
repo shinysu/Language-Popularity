@@ -24,6 +24,7 @@ def files_created_yesterday():
     get_files_by_date(start_date, end_date)
 
 def files_between_date():
+    #todo - date validation
     try:
         start_date = convert_to_date(input("Enter the start date (yyyy-mm-dd): "))
         end_date = convert_to_date(input("Enter the end date (yyyy-mm-dd): "))
