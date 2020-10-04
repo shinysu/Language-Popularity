@@ -34,3 +34,4 @@ def get_content_by_tags(html, tag):
     for name in soup.find_all(tag):
         data.append(name.text)
     return data
+
