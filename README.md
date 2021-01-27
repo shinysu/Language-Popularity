@@ -12,3 +12,4 @@ Python
 
 ### Release notes
 
+https://github.com/shinysu/Language-Popularity/wiki/Release-notes
