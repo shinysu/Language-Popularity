@@ -39,5 +39,3 @@ def run_query(query, args=[], conn=None):
         conn.commit()
     except Exception as e:
         print("ERROR OCCURED WHILE DB COMMIT --- DB_UTILS: 43", e)
-
-
