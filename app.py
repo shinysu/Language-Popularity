@@ -53,18 +53,19 @@ def get_required_data(results):
     organises data to be pushed into projects_info_file
     """
     repo_details = []
-    for repo in results['items']:
-        contributors = len(get_data(repo['contributors_url']).json())
-        data = {
-            'name': repo['name'],
-            'description': repo['description'],
-            'url': repo['url'],
-            'forks': repo['forks_count'],
-            'stars': repo['stargazers_count'],
-            'last_push': repo['pushed_at'],
-            'contributors': contributors
-        }
-        repo_details.append(data)
+    if 'items' in results:
+        for repo in results['items']:
+            contributors = len(get_data(repo['contributors_url']).json())
+            data = {
+                'name': repo['name'],
+                'description': repo['description'],
+                'url': repo['url'],
+                'forks': repo['forks_count'],
+                'stars': repo['stargazers_count'],
+                'last_push': repo['pushed_at'],
+                'contributors': contributors
+            }
+            repo_details.append(data)
     return repo_details
 
 
